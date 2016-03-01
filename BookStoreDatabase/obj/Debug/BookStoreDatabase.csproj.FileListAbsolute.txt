@@ -1,0 +1,9 @@
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\bin\Debug\BookStoreDatabase.exe.config
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\obj\Debug\BookStoreDatabase.csprojResolveAssemblyReference.cache
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\obj\Debug\BookStoreDatabase.Properties.Resources.resources
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\obj\Debug\BookStoreDatabase.csproj.GenerateResource.Cache
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\bin\Debug\BookStoreDatabase.exe
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\bin\Debug\BookStoreDatabase.pdb
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\obj\Debug\BookStoreDatabase.exe
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\obj\Debug\BookStoreDatabase.pdb
+c:\users\robert\documents\visual studio 2015\Projects\BookStoreDatabase\BookStoreDatabase\obj\Debug\BookStoreDatabase.MainWindow.resources
