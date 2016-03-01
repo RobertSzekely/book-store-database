@@ -45,6 +45,7 @@
             this.nextButton = new System.Windows.Forms.Button();
             this.lastButton = new System.Windows.Forms.Button();
             this.firstButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,7 +124,7 @@
             // 
             // addRecordButton
             // 
-            this.addRecordButton.Location = new System.Drawing.Point(754, 75);
+            this.addRecordButton.Location = new System.Drawing.Point(768, 67);
             this.addRecordButton.Name = "addRecordButton";
             this.addRecordButton.Size = new System.Drawing.Size(139, 46);
             this.addRecordButton.TabIndex = 9;
@@ -142,7 +143,7 @@
             // 
             // displayButton
             // 
-            this.displayButton.Location = new System.Drawing.Point(915, 75);
+            this.displayButton.Location = new System.Drawing.Point(768, 120);
             this.displayButton.Name = "displayButton";
             this.displayButton.Size = new System.Drawing.Size(139, 45);
             this.displayButton.TabIndex = 11;
@@ -153,7 +154,7 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(915, 126);
+            this.cancelButton.Location = new System.Drawing.Point(931, 848);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(139, 45);
             this.cancelButton.TabIndex = 12;
@@ -162,7 +163,7 @@
             // 
             // prevButton
             // 
-            this.prevButton.Location = new System.Drawing.Point(408, 847);
+            this.prevButton.Location = new System.Drawing.Point(366, 847);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(148, 46);
             this.prevButton.TabIndex = 13;
@@ -172,7 +173,7 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(562, 847);
+            this.nextButton.Location = new System.Drawing.Point(520, 847);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(148, 46);
             this.nextButton.TabIndex = 14;
@@ -182,7 +183,7 @@
             // 
             // lastButton
             // 
-            this.lastButton.Location = new System.Drawing.Point(716, 847);
+            this.lastButton.Location = new System.Drawing.Point(674, 847);
             this.lastButton.Name = "lastButton";
             this.lastButton.Size = new System.Drawing.Size(148, 46);
             this.lastButton.TabIndex = 15;
@@ -192,7 +193,7 @@
             // 
             // firstButton
             // 
-            this.firstButton.Location = new System.Drawing.Point(254, 847);
+            this.firstButton.Location = new System.Drawing.Point(212, 847);
             this.firstButton.Name = "firstButton";
             this.firstButton.Size = new System.Drawing.Size(148, 46);
             this.firstButton.TabIndex = 16;
@@ -200,12 +201,21 @@
             this.firstButton.UseVisualStyleBackColor = true;
             this.firstButton.Click += new System.EventHandler(this.firstButton_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(31, 858);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 25);
+            this.label6.TabIndex = 17;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(1102, 923);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.firstButton);
             this.Controls.Add(this.lastButton);
             this.Controls.Add(this.nextButton);
@@ -252,6 +262,7 @@
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button lastButton;
         private System.Windows.Forms.Button firstButton;
+        private System.Windows.Forms.Label label6;
     }
 }
 

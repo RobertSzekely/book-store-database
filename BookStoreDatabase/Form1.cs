@@ -58,26 +58,47 @@ namespace BookStoreDatabase
             pubDateBox.DataBindings.Add(new Binding("Text", tblBooksBS, "pub_date"));
             publisherIDBox.DataBindings.Add(new Binding("Text", tblBooksBS, "publisher_id"));
             languageBox.DataBindings.Add(new Binding("Text", tblBooksBS, "language"));
+            records();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
             tblBooksBS.MoveNext();
+            dgUpdate();
+            records();
         }
 
         private void prevButton_Click(object sender, EventArgs e)
         {
             tblBooksBS.MovePrevious();
+            dgUpdate();
+            records();
         }
 
         private void lastButton_Click(object sender, EventArgs e)
         {
             tblBooksBS.MoveLast();
+            dgUpdate();
+            records();
         }
 
         private void firstButton_Click(object sender, EventArgs e)
         {
             tblBooksBS.MoveFirst();
+            dgUpdate();
+            records();
+            
+        }
+
+        private void dgUpdate()
+        {
+            dg.ClearSelection();
+            dg.Rows[tblBooksBS.Position].Selected = true;
+            records();
+        }
+        private void records()
+        {
+            label6.Text = "Record" + tblBooksBS.Position + " of " + (tblBooksBS.Count - 1);
         }
     }
 }
