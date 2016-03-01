@@ -60,6 +60,24 @@ namespace BookStoreDatabase
             languageBox.DataBindings.Add(new Binding("Text", tblBooksBS, "language"));
         }
 
-   
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            tblBooksBS.MoveNext();
+        }
+
+        private void prevButton_Click(object sender, EventArgs e)
+        {
+            tblBooksBS.MovePrevious();
+        }
+
+        private void lastButton_Click(object sender, EventArgs e)
+        {
+            tblBooksBS.MoveLast();
+        }
+
+        private void firstButton_Click(object sender, EventArgs e)
+        {
+            tblBooksBS.MoveFirst();
+        }
     }
 }
