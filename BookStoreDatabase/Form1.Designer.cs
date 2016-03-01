@@ -93,6 +93,7 @@
             this.pubDateBox.Name = "pubDateBox";
             this.pubDateBox.Size = new System.Drawing.Size(249, 29);
             this.pubDateBox.TabIndex = 5;
+            this.pubDateBox.TextChanged += new System.EventHandler(this.pubDateBox_TextChanged);
             // 
             // publisherIDBox
             // 

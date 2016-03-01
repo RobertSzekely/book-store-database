@@ -17,6 +17,8 @@ namespace BookStoreDatabase
         SqlConnection cs = new SqlConnection("Data Source = DESKTOP-3JU4JU4; Initial Catalog = BookStore; Integrated Security = TRUE");
         SqlDataAdapter da = new SqlDataAdapter();
 
+        BindingSource tblBooksBS = new BindingSource();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +49,14 @@ namespace BookStoreDatabase
             da.SelectCommand = new SqlCommand("SELECT * FROM Books", cs);
             da.Fill(ds);
             dg.DataSource = ds.Tables[0];
+
+            tblBooksBS.DataSource = ds.Tables["Books"];
+            bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
+            publisherIDBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
+            bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
+            bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
         }
+
+   
     }
 }
