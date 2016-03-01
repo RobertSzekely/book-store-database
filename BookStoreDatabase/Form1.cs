@@ -47,14 +47,17 @@ namespace BookStoreDatabase
         private void displayButton_Click(object sender, EventArgs e)
         {
             da.SelectCommand = new SqlCommand("SELECT * FROM Books", cs);
-            da.Fill(ds);
-            dg.DataSource = ds.Tables[0];
+            ds.Clear();
+            //da.Fill(ds);
+            da.Fill(ds, "Books");
+            dg.DataSource = ds.Tables["Books"];
 
             tblBooksBS.DataSource = ds.Tables["Books"];
+
             bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
-            publisherIDBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
-            bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
-            bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
+            pubDateBox.DataBindings.Add(new Binding("Text", tblBooksBS, "pub_date"));
+            publisherIDBox.DataBindings.Add(new Binding("Text", tblBooksBS, "publisher_id"));
+            languageBox.DataBindings.Add(new Binding("Text", tblBooksBS, "language"));
         }
 
    

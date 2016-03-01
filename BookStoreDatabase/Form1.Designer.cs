@@ -41,6 +41,8 @@
             this.dg = new System.Windows.Forms.DataGridView();
             this.displayButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.prevButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +95,6 @@
             this.pubDateBox.Name = "pubDateBox";
             this.pubDateBox.Size = new System.Drawing.Size(249, 29);
             this.pubDateBox.TabIndex = 5;
-            this.pubDateBox.TextChanged += new System.EventHandler(this.pubDateBox_TextChanged);
             // 
             // publisherIDBox
             // 
@@ -157,12 +158,32 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
+            // prevButton
+            // 
+            this.prevButton.Location = new System.Drawing.Point(85, 838);
+            this.prevButton.Name = "prevButton";
+            this.prevButton.Size = new System.Drawing.Size(148, 46);
+            this.prevButton.TabIndex = 13;
+            this.prevButton.Text = "Previous";
+            this.prevButton.UseVisualStyleBackColor = true;
+            // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(274, 838);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(148, 46);
+            this.nextButton.TabIndex = 14;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(1101, 847);
+            this.ClientSize = new System.Drawing.Size(1102, 923);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.prevButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.displayButton);
             this.Controls.Add(this.dg);
@@ -201,6 +222,8 @@
         private System.Windows.Forms.DataGridView dg;
         private System.Windows.Forms.Button displayButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button prevButton;
+        private System.Windows.Forms.Button nextButton;
     }
 }
 
