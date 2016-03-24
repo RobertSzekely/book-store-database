@@ -14,6 +14,7 @@ namespace BookStoreDatabase
     public partial class MainWindow : Form
     {
         private DataSet ds = new DataSet();
+        private DataSet ds2 = new DataSet();
         private SqlConnection cs = new SqlConnection("Data Source = DESKTOP-3JU4JU4; Initial Catalog = BookStore; Integrated Security = TRUE");
         private SqlDataAdapter da = new SqlDataAdapter();
 
@@ -29,7 +30,7 @@ namespace BookStoreDatabase
         private void Form1_Load(object sender, EventArgs e)
         {
             //dg.DataSource = tblPublishersBS;
-            dg.AutoGenerateColumns = true;
+            publishersDataGrid.AutoGenerateColumns = true;
             addRecordButton.Enabled = false;
             nextButton.Enabled = false;
             prevButton.Enabled = false;
@@ -55,69 +56,34 @@ namespace BookStoreDatabase
 
         private void displayButton_Click(object sender, EventArgs e)
         {
-            //display all the records from Book table
-            //string query = null;
-
-            //if (pubNameBox.Text == "")
-            //{
-            //    query = "SELECT book_title FROM Books";
-            //}
-            //else
-            //{
-            //    query = "SELECT book_title FROM Books WHERE publisher_id = ";
-            //}
-            //da.SelectCommand = new SqlCommand("SELECT book_title FROM Books", cs);
-            //ds.Clear();
-
-            //da.Fill(ds, "Books");
-            //booksListView.Clear();
+                    
+            //SqlCommand cmd = new SqlCommand(@"SELECT * FROM Books", cs);
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //DataTable table = new DataTable("Books");
+            //da.Fill(table);
+  
+            //ListViewItem iItem;
             //cs.Open();
-            //SqlCommand cm = new SqlCommand("SELECT * FROM Books", cs);
-
-            //try
+            //SqlDataReader rReader = cmd.ExecuteReader();
+            //while (rReader.Read())
             //{
-            //    SqlDataReader dr = cm.ExecuteReader();
-            //    while (dr.Read())
-            //    {
-            //        ListViewItem item = new ListViewItem(dr["book_title"].ToString());
-            //        //item.SubItems.Add(dr["language"].ToString());
-
-            //        booksListView.Items.Add(item);
-            //    }
-            //    cs.Close();
-
+            //    iItem = new ListViewItem(rReader["book_title"].ToString());
+            //    booksListView.Items.Add(iItem);
             //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Could not display books.");
-            //}
+            //cs.Close();
 
+            //booksDataGrid.DataSource = null;
 
-            //booksListBox = ds.Tables["Books"];
-            //tblBooksBS.DataSource = ds.Tables["Books"];
-  
-            
-         
+            ds2.Clear();
 
+            da.SelectCommand = new SqlCommand("Select book_title, publisher_id, book_id, pub_date, language from Books", cs);
 
-            //SqlDataAdapter da = new SqlDataAdapter("select * from Books", cs);
-            SqlCommand cmd = new SqlCommand(@"SELECT * FROM Books", cs);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable("Books");
-            da.Fill(table);
-  
-            ListViewItem iItem;
-            cs.Open();
-            SqlDataReader rReader = cmd.ExecuteReader();
-            while (rReader.Read())
-            {
-                iItem = new ListViewItem(rReader[1].ToString());
-                booksListView.Items.Add(iItem);
-            }
-            cs.Close();
-            
+            da.Fill(ds2, "Books");
+            booksDataGrid.DataSource = ds2.Tables["Books"];
+            tblBooksBS.DataSource = ds2.Tables["Books"];
+            //bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
 
-
+            dgUpdateBooks();
 
             //disable the buttons for navigating
             nextButton.Enabled = false;
@@ -138,12 +104,18 @@ namespace BookStoreDatabase
             addRecordButton.Enabled = true;
 
             //display all the records from the Publishers table
+          
+            //dg.DataSource = null;
+            
             ds.Clear();
-            da.SelectCommand = new SqlCommand("SELECT publisher_name, city, country FROM Publishers", cs);
+      
+            da.SelectCommand = new SqlCommand("SELECT publisher_name, city, country, publisher_id FROM Publishers", cs);
 
             da.Fill(ds, "Publishers");
-            dg.DataSource = ds.Tables["Publishers"];
+            publishersDataGrid.DataSource = ds.Tables["Publishers"];
             tblPublishersBS.DataSource = ds.Tables["Publishers"];
+
+            dgUpdatePublishers();
 
             records();
         }
@@ -181,27 +153,51 @@ namespace BookStoreDatabase
             
         }
 
+        //private void updateBooksList()
+        //{
+        //    SqlCommand cmd = new SqlCommand(@"SELECT * FROM Books WHERE ", cs);
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataTable table = new DataTable("Books");
+        //    da.Fill(table);
+
+        //    ListViewItem iItem;
+        //    cs.Open();
+        //    SqlDataReader rReader = cmd.ExecuteReader();
+        //    while (rReader.Read())
+        //    {
+        //        iItem = new ListViewItem(rReader["book_title"].ToString());
+        //        booksListView.Items.Add(iItem);
+        //    }
+        //    cs.Close();
+
+        //    tblBooksBS.MoveFirst();
+        //    bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
+
+        //}
+
         private void dgUpdatePublishers()
         {
-            dg.ClearSelection();//clear datagrid selection
+            publishersDataGrid.ClearSelection();//clear datagrid selection
             //dg.Rows[tblBooksBS.Position].Selected = true;
-            dg.Rows[tblPublishersBS.Position].Selected = true;
+            publishersDataGrid.Rows[tblPublishersBS.Position].Selected = true;
 
+            pubIdTextBox.DataBindings.Add(new Binding("Text", tblPublishersBS, "publisher_id"));
             pubNameBox.DataBindings.Add(new Binding("Text", tblPublishersBS, "publisher_name"));
             pubCityBox.DataBindings.Add(new Binding("Text", tblPublishersBS, "city"));
             pubCountryBox.DataBindings.Add(new Binding("Text", tblPublishersBS, "country"));
+           
 
             pubNameBox.DataBindings.Clear();
             pubCityBox.DataBindings.Clear();
             pubCountryBox.DataBindings.Clear();
-
+            pubIdTextBox.DataBindings.Clear();
 
             records();
         }
         private void dgUpdateBooks()
         {
-            dg.ClearSelection();//clear datagrid selection
-            dg.Rows[tblBooksBS.Position].Selected = true;
+            booksDataGrid.ClearSelection();//clear datagrid selection
+            booksDataGrid.Rows[tblBooksBS.Position].Selected = true;
 
             bookTitleBox.DataBindings.Add(new Binding("Text", tblBooksBS, "book_title"));
             pubDateBox.DataBindings.Add(new Binding("Text", tblBooksBS, "pub_date"));
@@ -219,6 +215,17 @@ namespace BookStoreDatabase
             label6.Text = "Record" + tblPublishersBS.Position + " of " + (tblPublishersBS.Count - 1);
         }
 
+        private void prevBook_Click(object sender, EventArgs e)
+        {
+            tblBooksBS.MovePrevious();
+            dgUpdateBooks();
+        }
+        private void nextBook_Click(object sender, EventArgs e)
+        {
+            tblBooksBS.MoveNext();
+            dgUpdateBooks();
+        }
+
         private void dg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -228,5 +235,12 @@ namespace BookStoreDatabase
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }
