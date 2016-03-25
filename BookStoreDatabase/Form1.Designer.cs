@@ -57,6 +57,8 @@
             this.firstBookButton = new System.Windows.Forms.Button();
             this.lastBookButton = new System.Windows.Forms.Button();
             this.addPubRecord = new System.Windows.Forms.Button();
+            this.refreshPubButton = new System.Windows.Forms.Button();
+            this.refreshBooksButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.publishersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -335,12 +337,34 @@
             this.addPubRecord.UseVisualStyleBackColor = true;
             this.addPubRecord.Click += new System.EventHandler(this.addPubRecord_Click);
             // 
+            // refreshPubButton
+            // 
+            this.refreshPubButton.Location = new System.Drawing.Point(190, 239);
+            this.refreshPubButton.Name = "refreshPubButton";
+            this.refreshPubButton.Size = new System.Drawing.Size(129, 37);
+            this.refreshPubButton.TabIndex = 35;
+            this.refreshPubButton.Text = "Refresh";
+            this.refreshPubButton.UseVisualStyleBackColor = true;
+            this.refreshPubButton.Click += new System.EventHandler(this.refreshPubButton_Click);
+            // 
+            // refreshBooksButton
+            // 
+            this.refreshBooksButton.Location = new System.Drawing.Point(908, 239);
+            this.refreshBooksButton.Name = "refreshBooksButton";
+            this.refreshBooksButton.Size = new System.Drawing.Size(129, 37);
+            this.refreshBooksButton.TabIndex = 36;
+            this.refreshBooksButton.Text = "Refresh";
+            this.refreshBooksButton.UseVisualStyleBackColor = true;
+            this.refreshBooksButton.Click += new System.EventHandler(this.refreshBooksButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1500, 1051);
+            this.Controls.Add(this.refreshBooksButton);
+            this.Controls.Add(this.refreshPubButton);
             this.Controls.Add(this.addPubRecord);
             this.Controls.Add(this.lastBookButton);
             this.Controls.Add(this.firstBookButton);
@@ -413,6 +437,8 @@
         private System.Windows.Forms.Button firstBookButton;
         private System.Windows.Forms.Button lastBookButton;
         private System.Windows.Forms.Button addPubRecord;
+        private System.Windows.Forms.Button refreshPubButton;
+        private System.Windows.Forms.Button refreshBooksButton;
     }
 }
 

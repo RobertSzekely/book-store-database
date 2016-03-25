@@ -213,5 +213,14 @@ namespace BookStoreDatabase
             UpdateBooksDataGridView();
         }
 
+        private void refreshPubButton_Click(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void refreshBooksButton_Click(object sender, EventArgs e)
+        {
+            GetData();
+        }
     }
 }
