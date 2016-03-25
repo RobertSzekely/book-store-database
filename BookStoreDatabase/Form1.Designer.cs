@@ -37,7 +37,7 @@
             this.publisherIDBox = new System.Windows.Forms.TextBox();
             this.languageBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.addRecordButton = new System.Windows.Forms.Button();
+            this.addBookRecordButton = new System.Windows.Forms.Button();
             this.publishersDataGrid = new System.Windows.Forms.DataGridView();
             this.prevPubButton = new System.Windows.Forms.Button();
             this.nexPubtButton = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.prevBookButton = new System.Windows.Forms.Button();
             this.firstBookButton = new System.Windows.Forms.Button();
             this.lastBookButton = new System.Windows.Forms.Button();
+            this.addPubRecord = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.publishersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(760, 88);
+            this.label1.Location = new System.Drawing.Point(749, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
@@ -73,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(760, 120);
+            this.label2.Location = new System.Drawing.Point(749, 116);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 20);
@@ -83,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(760, 164);
+            this.label3.Location = new System.Drawing.Point(749, 160);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
@@ -93,7 +94,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(760, 200);
+            this.label4.Location = new System.Drawing.Point(749, 196);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 20);
@@ -102,56 +103,56 @@
             // 
             // bookTitleBox
             // 
-            this.bookTitleBox.Location = new System.Drawing.Point(851, 85);
+            this.bookTitleBox.Location = new System.Drawing.Point(881, 76);
             this.bookTitleBox.Margin = new System.Windows.Forms.Padding(2);
             this.bookTitleBox.Name = "bookTitleBox";
-            this.bookTitleBox.Size = new System.Drawing.Size(407, 26);
+            this.bookTitleBox.Size = new System.Drawing.Size(490, 26);
             this.bookTitleBox.TabIndex = 4;
             // 
             // pubDateBox
             // 
-            this.pubDateBox.Location = new System.Drawing.Point(893, 120);
+            this.pubDateBox.Location = new System.Drawing.Point(881, 115);
             this.pubDateBox.Margin = new System.Windows.Forms.Padding(2);
             this.pubDateBox.Name = "pubDateBox";
-            this.pubDateBox.Size = new System.Drawing.Size(365, 26);
+            this.pubDateBox.Size = new System.Drawing.Size(490, 26);
             this.pubDateBox.TabIndex = 5;
             // 
             // publisherIDBox
             // 
-            this.publisherIDBox.Location = new System.Drawing.Point(866, 161);
+            this.publisherIDBox.Location = new System.Drawing.Point(881, 157);
             this.publisherIDBox.Margin = new System.Windows.Forms.Padding(2);
             this.publisherIDBox.Name = "publisherIDBox";
-            this.publisherIDBox.Size = new System.Drawing.Size(392, 26);
+            this.publisherIDBox.Size = new System.Drawing.Size(490, 26);
             this.publisherIDBox.TabIndex = 6;
             // 
             // languageBox
             // 
-            this.languageBox.Location = new System.Drawing.Point(852, 198);
+            this.languageBox.Location = new System.Drawing.Point(881, 197);
             this.languageBox.Margin = new System.Windows.Forms.Padding(2);
             this.languageBox.Name = "languageBox";
-            this.languageBox.Size = new System.Drawing.Size(406, 26);
+            this.languageBox.Size = new System.Drawing.Size(490, 26);
             this.languageBox.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(760, 49);
+            this.label5.Location = new System.Drawing.Point(749, 45);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(210, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Add a book to the database:";
             // 
-            // addRecordButton
+            // addBookRecordButton
             // 
-            this.addRecordButton.Location = new System.Drawing.Point(394, 213);
-            this.addRecordButton.Margin = new System.Windows.Forms.Padding(2);
-            this.addRecordButton.Name = "addRecordButton";
-            this.addRecordButton.Size = new System.Drawing.Size(130, 37);
-            this.addRecordButton.TabIndex = 9;
-            this.addRecordButton.Text = "Add Record";
-            this.addRecordButton.UseVisualStyleBackColor = true;
-            this.addRecordButton.Click += new System.EventHandler(this.addRecordButton_Click);
+            this.addBookRecordButton.Location = new System.Drawing.Point(749, 239);
+            this.addBookRecordButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addBookRecordButton.Name = "addBookRecordButton";
+            this.addBookRecordButton.Size = new System.Drawing.Size(130, 37);
+            this.addBookRecordButton.TabIndex = 9;
+            this.addBookRecordButton.Text = "Add Record";
+            this.addBookRecordButton.UseVisualStyleBackColor = true;
+            this.addBookRecordButton.Click += new System.EventHandler(this.addBookRecordButton_Click);
             // 
             // publishersDataGrid
             // 
@@ -220,7 +221,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 49);
+            this.label7.Location = new System.Drawing.Point(50, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(239, 20);
             this.label7.TabIndex = 20;
@@ -229,7 +230,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 86);
+            this.label8.Location = new System.Drawing.Point(50, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 20);
             this.label8.TabIndex = 21;
@@ -238,7 +239,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(38, 127);
+            this.label9.Location = new System.Drawing.Point(50, 123);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 20);
             this.label9.TabIndex = 22;
@@ -247,7 +248,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(38, 169);
+            this.label10.Location = new System.Drawing.Point(50, 165);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 20);
             this.label10.TabIndex = 23;
@@ -255,23 +256,23 @@
             // 
             // pubNameBox
             // 
-            this.pubNameBox.Location = new System.Drawing.Point(100, 86);
+            this.pubNameBox.Location = new System.Drawing.Point(124, 82);
             this.pubNameBox.Name = "pubNameBox";
-            this.pubNameBox.Size = new System.Drawing.Size(424, 26);
+            this.pubNameBox.Size = new System.Drawing.Size(494, 26);
             this.pubNameBox.TabIndex = 24;
             // 
             // pubCityBox
             // 
-            this.pubCityBox.Location = new System.Drawing.Point(100, 124);
+            this.pubCityBox.Location = new System.Drawing.Point(124, 120);
             this.pubCityBox.Name = "pubCityBox";
-            this.pubCityBox.Size = new System.Drawing.Size(424, 26);
+            this.pubCityBox.Size = new System.Drawing.Size(494, 26);
             this.pubCityBox.TabIndex = 25;
             // 
             // pubCountryBox
             // 
-            this.pubCountryBox.Location = new System.Drawing.Point(112, 166);
+            this.pubCountryBox.Location = new System.Drawing.Point(124, 162);
             this.pubCountryBox.Name = "pubCountryBox";
-            this.pubCountryBox.Size = new System.Drawing.Size(412, 26);
+            this.pubCountryBox.Size = new System.Drawing.Size(494, 26);
             this.pubCountryBox.TabIndex = 26;
             // 
             // booksDataGrid
@@ -324,12 +325,23 @@
             this.lastBookButton.UseVisualStyleBackColor = true;
             this.lastBookButton.Click += new System.EventHandler(this.lastBookButton_Click);
             // 
+            // addPubRecord
+            // 
+            this.addPubRecord.Location = new System.Drawing.Point(42, 239);
+            this.addPubRecord.Name = "addPubRecord";
+            this.addPubRecord.Size = new System.Drawing.Size(129, 37);
+            this.addPubRecord.TabIndex = 34;
+            this.addPubRecord.Text = "Add Record";
+            this.addPubRecord.UseVisualStyleBackColor = true;
+            this.addPubRecord.Click += new System.EventHandler(this.addPubRecord_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1500, 1051);
+            this.Controls.Add(this.addPubRecord);
             this.Controls.Add(this.lastBookButton);
             this.Controls.Add(this.firstBookButton);
             this.Controls.Add(this.prevBookButton);
@@ -348,7 +360,7 @@
             this.Controls.Add(this.nexPubtButton);
             this.Controls.Add(this.prevPubButton);
             this.Controls.Add(this.publishersDataGrid);
-            this.Controls.Add(this.addRecordButton);
+            this.Controls.Add(this.addBookRecordButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.languageBox);
             this.Controls.Add(this.publisherIDBox);
@@ -381,7 +393,7 @@
         private System.Windows.Forms.TextBox publisherIDBox;
         private System.Windows.Forms.TextBox languageBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button addRecordButton;
+        private System.Windows.Forms.Button addBookRecordButton;
         private System.Windows.Forms.DataGridView publishersDataGrid;
         private System.Windows.Forms.Button prevPubButton;
         private System.Windows.Forms.Button nexPubtButton;
@@ -400,6 +412,7 @@
         private System.Windows.Forms.Button prevBookButton;
         private System.Windows.Forms.Button firstBookButton;
         private System.Windows.Forms.Button lastBookButton;
+        private System.Windows.Forms.Button addPubRecord;
     }
 }
 

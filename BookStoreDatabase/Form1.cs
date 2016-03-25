@@ -90,7 +90,19 @@ namespace BookStoreDatabase
             }
         }
 
-        private void addRecordButton_Click(object sender, EventArgs e)
+        private void addPubRecord_Click(object sender, EventArgs e)
+        { //add a record to the Publishers table
+            dataAdapter.InsertCommand = new SqlCommand("INSERT INTO Publishers VALUES (@publisher_name, @city, @country)", connection);
+            dataAdapter.InsertCommand.Parameters.Add("@publisher_name", SqlDbType.VarChar).Value = pubNameBox.Text;
+            dataAdapter.InsertCommand.Parameters.Add("@city", SqlDbType.VarChar).Value = pubCityBox.Text;
+            dataAdapter.InsertCommand.Parameters.Add("@country", SqlDbType.VarChar).Value = pubCountryBox.Text;
+
+            connection.Open();
+            dataAdapter.InsertCommand.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        private void addBookRecordButton_Click(object sender, EventArgs e)
         {
             //add a record to the Book table   
             dataAdapter.InsertCommand = new SqlCommand("INSERT INTO Books VALUES (@book_title, @pub_date, @pud_id, @language)", connection);
@@ -200,5 +212,6 @@ namespace BookStoreDatabase
             detailsBindingSource.MoveLast();
             UpdateBooksDataGridView();
         }
+
     }
 }
