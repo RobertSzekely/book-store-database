@@ -33,9 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bookTitleBox = new System.Windows.Forms.TextBox();
-            this.pubDateBox = new System.Windows.Forms.TextBox();
-            this.publisherIDBox = new System.Windows.Forms.TextBox();
-            this.languageBox = new System.Windows.Forms.TextBox();
+            this.BookPubDateBox = new System.Windows.Forms.TextBox();
+            this.bookPublisherIDBox = new System.Windows.Forms.TextBox();
+            this.bookLanguageBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.addBookRecordButton = new System.Windows.Forms.Button();
             this.publishersDataGrid = new System.Windows.Forms.DataGridView();
@@ -59,6 +59,8 @@
             this.addPubRecord = new System.Windows.Forms.Button();
             this.refreshPubButton = new System.Windows.Forms.Button();
             this.refreshBooksButton = new System.Windows.Forms.Button();
+            this.delBookButton = new System.Windows.Forms.Button();
+            this.updBookButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.publishersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -111,29 +113,29 @@
             this.bookTitleBox.Size = new System.Drawing.Size(490, 26);
             this.bookTitleBox.TabIndex = 4;
             // 
-            // pubDateBox
+            // BookPubDateBox
             // 
-            this.pubDateBox.Location = new System.Drawing.Point(881, 115);
-            this.pubDateBox.Margin = new System.Windows.Forms.Padding(2);
-            this.pubDateBox.Name = "pubDateBox";
-            this.pubDateBox.Size = new System.Drawing.Size(490, 26);
-            this.pubDateBox.TabIndex = 5;
+            this.BookPubDateBox.Location = new System.Drawing.Point(881, 115);
+            this.BookPubDateBox.Margin = new System.Windows.Forms.Padding(2);
+            this.BookPubDateBox.Name = "BookPubDateBox";
+            this.BookPubDateBox.Size = new System.Drawing.Size(490, 26);
+            this.BookPubDateBox.TabIndex = 5;
             // 
-            // publisherIDBox
+            // bookPublisherIDBox
             // 
-            this.publisherIDBox.Location = new System.Drawing.Point(881, 157);
-            this.publisherIDBox.Margin = new System.Windows.Forms.Padding(2);
-            this.publisherIDBox.Name = "publisherIDBox";
-            this.publisherIDBox.Size = new System.Drawing.Size(490, 26);
-            this.publisherIDBox.TabIndex = 6;
+            this.bookPublisherIDBox.Location = new System.Drawing.Point(881, 157);
+            this.bookPublisherIDBox.Margin = new System.Windows.Forms.Padding(2);
+            this.bookPublisherIDBox.Name = "bookPublisherIDBox";
+            this.bookPublisherIDBox.Size = new System.Drawing.Size(490, 26);
+            this.bookPublisherIDBox.TabIndex = 6;
             // 
-            // languageBox
+            // bookLanguageBox
             // 
-            this.languageBox.Location = new System.Drawing.Point(881, 197);
-            this.languageBox.Margin = new System.Windows.Forms.Padding(2);
-            this.languageBox.Name = "languageBox";
-            this.languageBox.Size = new System.Drawing.Size(490, 26);
-            this.languageBox.TabIndex = 7;
+            this.bookLanguageBox.Location = new System.Drawing.Point(881, 197);
+            this.bookLanguageBox.Margin = new System.Windows.Forms.Padding(2);
+            this.bookLanguageBox.Name = "bookLanguageBox";
+            this.bookLanguageBox.Size = new System.Drawing.Size(490, 26);
+            this.bookLanguageBox.TabIndex = 7;
             // 
             // label5
             // 
@@ -147,7 +149,7 @@
             // 
             // addBookRecordButton
             // 
-            this.addBookRecordButton.Location = new System.Drawing.Point(749, 239);
+            this.addBookRecordButton.Location = new System.Drawing.Point(788, 239);
             this.addBookRecordButton.Margin = new System.Windows.Forms.Padding(2);
             this.addBookRecordButton.Name = "addBookRecordButton";
             this.addBookRecordButton.Size = new System.Drawing.Size(130, 37);
@@ -329,7 +331,7 @@
             // 
             // addPubRecord
             // 
-            this.addPubRecord.Location = new System.Drawing.Point(42, 239);
+            this.addPubRecord.Location = new System.Drawing.Point(72, 239);
             this.addPubRecord.Name = "addPubRecord";
             this.addPubRecord.Size = new System.Drawing.Size(129, 37);
             this.addPubRecord.TabIndex = 34;
@@ -339,7 +341,7 @@
             // 
             // refreshPubButton
             // 
-            this.refreshPubButton.Location = new System.Drawing.Point(190, 239);
+            this.refreshPubButton.Location = new System.Drawing.Point(569, 239);
             this.refreshPubButton.Name = "refreshPubButton";
             this.refreshPubButton.Size = new System.Drawing.Size(129, 37);
             this.refreshPubButton.TabIndex = 35;
@@ -349,7 +351,7 @@
             // 
             // refreshBooksButton
             // 
-            this.refreshBooksButton.Location = new System.Drawing.Point(908, 239);
+            this.refreshBooksButton.Location = new System.Drawing.Point(1286, 239);
             this.refreshBooksButton.Name = "refreshBooksButton";
             this.refreshBooksButton.Size = new System.Drawing.Size(129, 37);
             this.refreshBooksButton.TabIndex = 36;
@@ -357,12 +359,33 @@
             this.refreshBooksButton.UseVisualStyleBackColor = true;
             this.refreshBooksButton.Click += new System.EventHandler(this.refreshBooksButton_Click);
             // 
+            // delBookButton
+            // 
+            this.delBookButton.Location = new System.Drawing.Point(923, 239);
+            this.delBookButton.Name = "delBookButton";
+            this.delBookButton.Size = new System.Drawing.Size(129, 37);
+            this.delBookButton.TabIndex = 37;
+            this.delBookButton.Text = "Delete";
+            this.delBookButton.UseVisualStyleBackColor = true;
+            this.delBookButton.Click += new System.EventHandler(this.delBookButton_Click);
+            // 
+            // updBookButton
+            // 
+            this.updBookButton.Location = new System.Drawing.Point(1058, 239);
+            this.updBookButton.Name = "updBookButton";
+            this.updBookButton.Size = new System.Drawing.Size(129, 37);
+            this.updBookButton.TabIndex = 38;
+            this.updBookButton.Text = "Update";
+            this.updBookButton.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1500, 1051);
+            this.Controls.Add(this.updBookButton);
+            this.Controls.Add(this.delBookButton);
             this.Controls.Add(this.refreshBooksButton);
             this.Controls.Add(this.refreshPubButton);
             this.Controls.Add(this.addPubRecord);
@@ -386,9 +409,9 @@
             this.Controls.Add(this.publishersDataGrid);
             this.Controls.Add(this.addBookRecordButton);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.languageBox);
-            this.Controls.Add(this.publisherIDBox);
-            this.Controls.Add(this.pubDateBox);
+            this.Controls.Add(this.bookLanguageBox);
+            this.Controls.Add(this.bookPublisherIDBox);
+            this.Controls.Add(this.BookPubDateBox);
             this.Controls.Add(this.bookTitleBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -413,9 +436,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox bookTitleBox;
-        private System.Windows.Forms.TextBox pubDateBox;
-        private System.Windows.Forms.TextBox publisherIDBox;
-        private System.Windows.Forms.TextBox languageBox;
+        private System.Windows.Forms.TextBox BookPubDateBox;
+        private System.Windows.Forms.TextBox bookPublisherIDBox;
+        private System.Windows.Forms.TextBox bookLanguageBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button addBookRecordButton;
         private System.Windows.Forms.DataGridView publishersDataGrid;
@@ -439,6 +462,8 @@
         private System.Windows.Forms.Button addPubRecord;
         private System.Windows.Forms.Button refreshPubButton;
         private System.Windows.Forms.Button refreshBooksButton;
+        private System.Windows.Forms.Button delBookButton;
+        private System.Windows.Forms.Button updBookButton;
     }
 }
 

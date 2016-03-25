@@ -82,7 +82,7 @@ namespace BookStoreDatabase
                 // details table based on the current row in the master table. 
                 detailsBindingSource.DataSource = masterBindingSource;
                 detailsBindingSource.DataMember = "PublishersBooks";
-                UpdatePublishersDataGridView();
+               
 
             } catch (SqlException)
             {
@@ -107,9 +107,9 @@ namespace BookStoreDatabase
             //add a record to the Book table   
             dataAdapter.InsertCommand = new SqlCommand("INSERT INTO Books VALUES (@book_title, @pub_date, @pud_id, @language)", connection);
             dataAdapter.InsertCommand.Parameters.Add("@book_title", SqlDbType.VarChar).Value = bookTitleBox.Text;
-            dataAdapter.InsertCommand.Parameters.Add("@pub_date", SqlDbType.Date).Value = pubDateBox.Text;
-            dataAdapter.InsertCommand.Parameters.Add("@pud_id", SqlDbType.Int).Value = publisherIDBox.Text;
-            dataAdapter.InsertCommand.Parameters.Add("@language", SqlDbType.VarChar).Value = languageBox.Text;
+            dataAdapter.InsertCommand.Parameters.Add("@pub_date", SqlDbType.Date).Value = BookPubDateBox.Text;
+            dataAdapter.InsertCommand.Parameters.Add("@pud_id", SqlDbType.Int).Value = bookPublisherIDBox.Text;
+            dataAdapter.InsertCommand.Parameters.Add("@language", SqlDbType.VarChar).Value = bookLanguageBox.Text;
 
             connection.Open();
             dataAdapter.InsertCommand.ExecuteNonQuery();
@@ -175,14 +175,14 @@ namespace BookStoreDatabase
             booksDataGrid.Rows[detailsBindingSource.Position].Selected = true;
 
             bookTitleBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "book_title"));
-            pubDateBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "pub_date"));
-            publisherIDBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "publisher_id"));
-            languageBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "language"));
+            BookPubDateBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "pub_date"));
+            bookPublisherIDBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "publisher_id"));
+            bookLanguageBox.DataBindings.Add(new Binding("Text", detailsBindingSource, "language"));
 
             bookTitleBox.DataBindings.Clear();
-            pubDateBox.DataBindings.Clear();
-            publisherIDBox.DataBindings.Clear();
-            languageBox.DataBindings.Clear();
+            BookPubDateBox.DataBindings.Clear();
+            bookPublisherIDBox.DataBindings.Clear();
+            bookLanguageBox.DataBindings.Clear();
 
         }
         private void records()
@@ -221,6 +221,24 @@ namespace BookStoreDatabase
         private void refreshBooksButton_Click(object sender, EventArgs e)
         {
             GetData();
+        }
+
+        private void delBookButton_Click(object sender, EventArgs e)
+        {
+            String bookID = booksDataGrid.CurrentRow.Cells[0].Value.ToString();
+            //MessageBox.Show("Book id=" + bookID);
+            if (bookID == "")
+            {
+                MessageBox.Show("Can not delete book with ID NULL");
+                return;
+            }
+
+            String delQuery = "delete from Books where book_id=" + bookID;
+            dataAdapter.UpdateCommand = new SqlCommand(delQuery, connection);
+            connection.Open();
+            dataAdapter.UpdateCommand.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Book record deleted succesfully");
         }
     }
 }
