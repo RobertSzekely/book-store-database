@@ -147,10 +147,10 @@
             // 
             // addRecordButton
             // 
-            this.addRecordButton.Location = new System.Drawing.Point(42, 229);
+            this.addRecordButton.Location = new System.Drawing.Point(394, 213);
             this.addRecordButton.Margin = new System.Windows.Forms.Padding(2);
             this.addRecordButton.Name = "addRecordButton";
-            this.addRecordButton.Size = new System.Drawing.Size(114, 52);
+            this.addRecordButton.Size = new System.Drawing.Size(130, 37);
             this.addRecordButton.TabIndex = 9;
             this.addRecordButton.Text = "Add Record";
             this.addRecordButton.UseVisualStyleBackColor = true;
@@ -158,18 +158,19 @@
             // 
             // publishersDataGrid
             // 
+            this.publishersDataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.publishersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.publishersDataGrid.Location = new System.Drawing.Point(42, 328);
+            this.publishersDataGrid.Location = new System.Drawing.Point(42, 291);
             this.publishersDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.publishersDataGrid.Name = "publishersDataGrid";
             this.publishersDataGrid.RowTemplate.Height = 31;
-            this.publishersDataGrid.Size = new System.Drawing.Size(513, 599);
+            this.publishersDataGrid.Size = new System.Drawing.Size(513, 636);
             this.publishersDataGrid.TabIndex = 10;
             this.publishersDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellContentClick);
             // 
             // displayButton
             // 
-            this.displayButton.Location = new System.Drawing.Point(747, 245);
+            this.displayButton.Location = new System.Drawing.Point(1393, 838);
             this.displayButton.Margin = new System.Windows.Forms.Padding(2);
             this.displayButton.Name = "displayButton";
             this.displayButton.Size = new System.Drawing.Size(114, 54);
@@ -233,7 +234,7 @@
             // 
             // DisplayPub
             // 
-            this.DisplayPub.Location = new System.Drawing.Point(165, 229);
+            this.DisplayPub.Location = new System.Drawing.Point(1511, 840);
             this.DisplayPub.Margin = new System.Windows.Forms.Padding(2);
             this.DisplayPub.Name = "DisplayPub";
             this.DisplayPub.Size = new System.Drawing.Size(114, 52);
@@ -318,11 +319,12 @@
             // 
             // booksDataGrid
             // 
+            this.booksDataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.booksDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.booksDataGrid.Location = new System.Drawing.Point(615, 328);
+            this.booksDataGrid.Location = new System.Drawing.Point(615, 291);
             this.booksDataGrid.Name = "booksDataGrid";
             this.booksDataGrid.RowTemplate.Height = 28;
-            this.booksDataGrid.Size = new System.Drawing.Size(513, 599);
+            this.booksDataGrid.Size = new System.Drawing.Size(588, 636);
             this.booksDataGrid.TabIndex = 28;
             this.booksDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -335,7 +337,7 @@
             // 
             // nextBook
             // 
-            this.nextBook.Location = new System.Drawing.Point(876, 948);
+            this.nextBook.Location = new System.Drawing.Point(938, 948);
             this.nextBook.Name = "nextBook";
             this.nextBook.Size = new System.Drawing.Size(121, 39);
             this.nextBook.TabIndex = 30;
@@ -345,7 +347,7 @@
             // 
             // prevBook
             // 
-            this.prevBook.Location = new System.Drawing.Point(731, 948);
+            this.prevBook.Location = new System.Drawing.Point(793, 948);
             this.prevBook.Name = "prevBook";
             this.prevBook.Size = new System.Drawing.Size(121, 39);
             this.prevBook.TabIndex = 31;
@@ -357,7 +359,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 1051);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1234, 1051);
             this.Controls.Add(this.prevBook);
             this.Controls.Add(this.nextBook);
             this.Controls.Add(this.pubIdTextBox);
