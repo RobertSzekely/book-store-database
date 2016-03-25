@@ -39,13 +39,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.addRecordButton = new System.Windows.Forms.Button();
             this.publishersDataGrid = new System.Windows.Forms.DataGridView();
-            this.displayButton = new System.Windows.Forms.Button();
-            this.prevButton = new System.Windows.Forms.Button();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.lastButton = new System.Windows.Forms.Button();
-            this.firstButton = new System.Windows.Forms.Button();
+            this.prevPubButton = new System.Windows.Forms.Button();
+            this.nexPubtButton = new System.Windows.Forms.Button();
+            this.lastPubButton = new System.Windows.Forms.Button();
+            this.firstPubButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.DisplayPub = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,12 +51,11 @@
             this.pubNameBox = new System.Windows.Forms.TextBox();
             this.pubCityBox = new System.Windows.Forms.TextBox();
             this.pubCountryBox = new System.Windows.Forms.TextBox();
-            this.booksListView = new System.Windows.Forms.ListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.booksDataGrid = new System.Windows.Forms.DataGridView();
-            this.pubIdTextBox = new System.Windows.Forms.TextBox();
-            this.nextBook = new System.Windows.Forms.Button();
-            this.prevBook = new System.Windows.Forms.Button();
+            this.nextBookButton = new System.Windows.Forms.Button();
+            this.prevBookButton = new System.Windows.Forms.Button();
+            this.firstBookButton = new System.Windows.Forms.Button();
+            this.lastBookButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.publishersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(630, 88);
+            this.label1.Location = new System.Drawing.Point(760, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
@@ -76,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(630, 120);
+            this.label2.Location = new System.Drawing.Point(760, 120);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 20);
@@ -86,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(630, 164);
+            this.label3.Location = new System.Drawing.Point(760, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
@@ -96,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(630, 200);
+            this.label4.Location = new System.Drawing.Point(760, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 20);
@@ -105,7 +102,7 @@
             // 
             // bookTitleBox
             // 
-            this.bookTitleBox.Location = new System.Drawing.Point(721, 85);
+            this.bookTitleBox.Location = new System.Drawing.Point(851, 85);
             this.bookTitleBox.Margin = new System.Windows.Forms.Padding(2);
             this.bookTitleBox.Name = "bookTitleBox";
             this.bookTitleBox.Size = new System.Drawing.Size(407, 26);
@@ -113,7 +110,7 @@
             // 
             // pubDateBox
             // 
-            this.pubDateBox.Location = new System.Drawing.Point(763, 120);
+            this.pubDateBox.Location = new System.Drawing.Point(893, 120);
             this.pubDateBox.Margin = new System.Windows.Forms.Padding(2);
             this.pubDateBox.Name = "pubDateBox";
             this.pubDateBox.Size = new System.Drawing.Size(365, 26);
@@ -121,7 +118,7 @@
             // 
             // publisherIDBox
             // 
-            this.publisherIDBox.Location = new System.Drawing.Point(736, 161);
+            this.publisherIDBox.Location = new System.Drawing.Point(866, 161);
             this.publisherIDBox.Margin = new System.Windows.Forms.Padding(2);
             this.publisherIDBox.Name = "publisherIDBox";
             this.publisherIDBox.Size = new System.Drawing.Size(392, 26);
@@ -129,7 +126,7 @@
             // 
             // languageBox
             // 
-            this.languageBox.Location = new System.Drawing.Point(722, 198);
+            this.languageBox.Location = new System.Drawing.Point(852, 198);
             this.languageBox.Margin = new System.Windows.Forms.Padding(2);
             this.languageBox.Name = "languageBox";
             this.languageBox.Size = new System.Drawing.Size(406, 26);
@@ -138,7 +135,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(630, 49);
+            this.label5.Location = new System.Drawing.Point(760, 49);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(210, 20);
@@ -164,84 +161,61 @@
             this.publishersDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.publishersDataGrid.Name = "publishersDataGrid";
             this.publishersDataGrid.RowTemplate.Height = 31;
-            this.publishersDataGrid.Size = new System.Drawing.Size(513, 636);
+            this.publishersDataGrid.Size = new System.Drawing.Size(687, 636);
             this.publishersDataGrid.TabIndex = 10;
-            this.publishersDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellContentClick);
             // 
-            // displayButton
+            // prevPubButton
             // 
-            this.displayButton.Location = new System.Drawing.Point(1393, 838);
-            this.displayButton.Margin = new System.Windows.Forms.Padding(2);
-            this.displayButton.Name = "displayButton";
-            this.displayButton.Size = new System.Drawing.Size(114, 54);
-            this.displayButton.TabIndex = 11;
-            this.displayButton.Text = "Display Books";
-            this.displayButton.UseVisualStyleBackColor = true;
-            this.displayButton.Click += new System.EventHandler(this.displayButton_Click);
+            this.prevPubButton.Location = new System.Drawing.Point(247, 947);
+            this.prevPubButton.Margin = new System.Windows.Forms.Padding(2);
+            this.prevPubButton.Name = "prevPubButton";
+            this.prevPubButton.Size = new System.Drawing.Size(102, 38);
+            this.prevPubButton.TabIndex = 13;
+            this.prevPubButton.Text = "Previous";
+            this.prevPubButton.UseVisualStyleBackColor = true;
+            this.prevPubButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
-            // prevButton
+            // nexPubtButton
             // 
-            this.prevButton.Location = new System.Drawing.Point(171, 948);
-            this.prevButton.Margin = new System.Windows.Forms.Padding(2);
-            this.prevButton.Name = "prevButton";
-            this.prevButton.Size = new System.Drawing.Size(102, 38);
-            this.prevButton.TabIndex = 13;
-            this.prevButton.Text = "Previous";
-            this.prevButton.UseVisualStyleBackColor = true;
-            this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
+            this.nexPubtButton.Location = new System.Drawing.Point(364, 947);
+            this.nexPubtButton.Margin = new System.Windows.Forms.Padding(2);
+            this.nexPubtButton.Name = "nexPubtButton";
+            this.nexPubtButton.Size = new System.Drawing.Size(109, 38);
+            this.nexPubtButton.TabIndex = 14;
+            this.nexPubtButton.Text = "Next";
+            this.nexPubtButton.UseVisualStyleBackColor = true;
+            this.nexPubtButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
-            // nextButton
+            // lastPubButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(288, 948);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(109, 38);
-            this.nextButton.TabIndex = 14;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            this.lastPubButton.Location = new System.Drawing.Point(488, 947);
+            this.lastPubButton.Margin = new System.Windows.Forms.Padding(2);
+            this.lastPubButton.Name = "lastPubButton";
+            this.lastPubButton.Size = new System.Drawing.Size(118, 38);
+            this.lastPubButton.TabIndex = 15;
+            this.lastPubButton.Text = "Last";
+            this.lastPubButton.UseVisualStyleBackColor = true;
+            this.lastPubButton.Click += new System.EventHandler(this.lastButton_Click);
             // 
-            // lastButton
+            // firstPubButton
             // 
-            this.lastButton.Location = new System.Drawing.Point(412, 948);
-            this.lastButton.Margin = new System.Windows.Forms.Padding(2);
-            this.lastButton.Name = "lastButton";
-            this.lastButton.Size = new System.Drawing.Size(118, 38);
-            this.lastButton.TabIndex = 15;
-            this.lastButton.Text = "Last";
-            this.lastButton.UseVisualStyleBackColor = true;
-            this.lastButton.Click += new System.EventHandler(this.lastButton_Click);
-            // 
-            // firstButton
-            // 
-            this.firstButton.Location = new System.Drawing.Point(60, 948);
-            this.firstButton.Margin = new System.Windows.Forms.Padding(2);
-            this.firstButton.Name = "firstButton";
-            this.firstButton.Size = new System.Drawing.Size(96, 38);
-            this.firstButton.TabIndex = 16;
-            this.firstButton.Text = "First";
-            this.firstButton.UseVisualStyleBackColor = true;
-            this.firstButton.Click += new System.EventHandler(this.firstButton_Click);
+            this.firstPubButton.Location = new System.Drawing.Point(136, 947);
+            this.firstPubButton.Margin = new System.Windows.Forms.Padding(2);
+            this.firstPubButton.Name = "firstPubButton";
+            this.firstPubButton.Size = new System.Drawing.Size(96, 38);
+            this.firstPubButton.TabIndex = 16;
+            this.firstPubButton.Text = "First";
+            this.firstPubButton.UseVisualStyleBackColor = true;
+            this.firstPubButton.Click += new System.EventHandler(this.firstButton_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 995);
+            this.label6.Location = new System.Drawing.Point(319, 1007);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 17;
-            // 
-            // DisplayPub
-            // 
-            this.DisplayPub.Location = new System.Drawing.Point(1511, 840);
-            this.DisplayPub.Margin = new System.Windows.Forms.Padding(2);
-            this.DisplayPub.Name = "DisplayPub";
-            this.DisplayPub.Size = new System.Drawing.Size(114, 52);
-            this.DisplayPub.TabIndex = 19;
-            this.DisplayPub.Text = "Display Publishers";
-            this.DisplayPub.UseVisualStyleBackColor = true;
-            this.DisplayPub.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -251,7 +225,6 @@
             this.label7.Size = new System.Drawing.Size(239, 20);
             this.label7.TabIndex = 20;
             this.label7.Text = "Add a publisher to the database:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -301,71 +274,67 @@
             this.pubCountryBox.Size = new System.Drawing.Size(412, 26);
             this.pubCountryBox.TabIndex = 26;
             // 
-            // booksListView
-            // 
-            this.booksListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6});
-            this.booksListView.Location = new System.Drawing.Point(1255, 491);
-            this.booksListView.Name = "booksListView";
-            this.booksListView.Size = new System.Drawing.Size(397, 219);
-            this.booksListView.TabIndex = 27;
-            this.booksListView.UseCompatibleStateImageBehavior = false;
-            this.booksListView.View = System.Windows.Forms.View.Tile;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Title";
-            this.columnHeader6.Width = 183;
-            // 
             // booksDataGrid
             // 
             this.booksDataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.booksDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.booksDataGrid.Location = new System.Drawing.Point(615, 291);
+            this.booksDataGrid.Location = new System.Drawing.Point(749, 291);
             this.booksDataGrid.Name = "booksDataGrid";
             this.booksDataGrid.RowTemplate.Height = 28;
-            this.booksDataGrid.Size = new System.Drawing.Size(588, 636);
+            this.booksDataGrid.Size = new System.Drawing.Size(695, 636);
             this.booksDataGrid.TabIndex = 28;
-            this.booksDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // pubIdTextBox
+            // nextBookButton
             // 
-            this.pubIdTextBox.Location = new System.Drawing.Point(1255, 767);
-            this.pubIdTextBox.Name = "pubIdTextBox";
-            this.pubIdTextBox.Size = new System.Drawing.Size(100, 26);
-            this.pubIdTextBox.TabIndex = 29;
+            this.nextBookButton.Location = new System.Drawing.Point(1111, 947);
+            this.nextBookButton.Name = "nextBookButton";
+            this.nextBookButton.Size = new System.Drawing.Size(121, 39);
+            this.nextBookButton.TabIndex = 30;
+            this.nextBookButton.Text = "Next";
+            this.nextBookButton.UseVisualStyleBackColor = true;
+            this.nextBookButton.Click += new System.EventHandler(this.nextBook_Click);
             // 
-            // nextBook
+            // prevBookButton
             // 
-            this.nextBook.Location = new System.Drawing.Point(938, 948);
-            this.nextBook.Name = "nextBook";
-            this.nextBook.Size = new System.Drawing.Size(121, 39);
-            this.nextBook.TabIndex = 30;
-            this.nextBook.Text = "Next";
-            this.nextBook.UseVisualStyleBackColor = true;
-            this.nextBook.Click += new System.EventHandler(this.nextBook_Click);
+            this.prevBookButton.Location = new System.Drawing.Point(975, 947);
+            this.prevBookButton.Name = "prevBookButton";
+            this.prevBookButton.Size = new System.Drawing.Size(121, 39);
+            this.prevBookButton.TabIndex = 31;
+            this.prevBookButton.Text = "Previous";
+            this.prevBookButton.UseVisualStyleBackColor = true;
+            this.prevBookButton.Click += new System.EventHandler(this.prevBook_Click);
             // 
-            // prevBook
+            // firstBookButton
             // 
-            this.prevBook.Location = new System.Drawing.Point(793, 948);
-            this.prevBook.Name = "prevBook";
-            this.prevBook.Size = new System.Drawing.Size(121, 39);
-            this.prevBook.TabIndex = 31;
-            this.prevBook.Text = "Previous";
-            this.prevBook.UseVisualStyleBackColor = true;
-            this.prevBook.Click += new System.EventHandler(this.prevBook_Click);
+            this.firstBookButton.Location = new System.Drawing.Point(838, 947);
+            this.firstBookButton.Name = "firstBookButton";
+            this.firstBookButton.Size = new System.Drawing.Size(121, 39);
+            this.firstBookButton.TabIndex = 32;
+            this.firstBookButton.Text = "First";
+            this.firstBookButton.UseVisualStyleBackColor = true;
+            this.firstBookButton.Click += new System.EventHandler(this.firstBookButton_Click);
+            // 
+            // lastBookButton
+            // 
+            this.lastBookButton.Location = new System.Drawing.Point(1250, 947);
+            this.lastBookButton.Name = "lastBookButton";
+            this.lastBookButton.Size = new System.Drawing.Size(121, 39);
+            this.lastBookButton.TabIndex = 33;
+            this.lastBookButton.Text = "Last";
+            this.lastBookButton.UseVisualStyleBackColor = true;
+            this.lastBookButton.Click += new System.EventHandler(this.lastBookButton_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1234, 1051);
-            this.Controls.Add(this.prevBook);
-            this.Controls.Add(this.nextBook);
-            this.Controls.Add(this.pubIdTextBox);
+            this.ClientSize = new System.Drawing.Size(1500, 1051);
+            this.Controls.Add(this.lastBookButton);
+            this.Controls.Add(this.firstBookButton);
+            this.Controls.Add(this.prevBookButton);
+            this.Controls.Add(this.nextBookButton);
             this.Controls.Add(this.booksDataGrid);
-            this.Controls.Add(this.booksListView);
             this.Controls.Add(this.pubCountryBox);
             this.Controls.Add(this.pubCityBox);
             this.Controls.Add(this.pubNameBox);
@@ -373,13 +342,11 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.DisplayPub);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.firstButton);
-            this.Controls.Add(this.lastButton);
-            this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.prevButton);
-            this.Controls.Add(this.displayButton);
+            this.Controls.Add(this.firstPubButton);
+            this.Controls.Add(this.lastPubButton);
+            this.Controls.Add(this.nexPubtButton);
+            this.Controls.Add(this.prevPubButton);
             this.Controls.Add(this.publishersDataGrid);
             this.Controls.Add(this.addRecordButton);
             this.Controls.Add(this.label5);
@@ -416,13 +383,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button addRecordButton;
         private System.Windows.Forms.DataGridView publishersDataGrid;
-        private System.Windows.Forms.Button displayButton;
-        private System.Windows.Forms.Button prevButton;
-        private System.Windows.Forms.Button nextButton;
-        private System.Windows.Forms.Button lastButton;
-        private System.Windows.Forms.Button firstButton;
+        private System.Windows.Forms.Button prevPubButton;
+        private System.Windows.Forms.Button nexPubtButton;
+        private System.Windows.Forms.Button lastPubButton;
+        private System.Windows.Forms.Button firstPubButton;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button DisplayPub;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -430,12 +395,11 @@
         private System.Windows.Forms.TextBox pubNameBox;
         private System.Windows.Forms.TextBox pubCityBox;
         private System.Windows.Forms.TextBox pubCountryBox;
-        private System.Windows.Forms.ListView booksListView;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.DataGridView booksDataGrid;
-        private System.Windows.Forms.TextBox pubIdTextBox;
-        private System.Windows.Forms.Button nextBook;
-        private System.Windows.Forms.Button prevBook;
+        private System.Windows.Forms.Button nextBookButton;
+        private System.Windows.Forms.Button prevBookButton;
+        private System.Windows.Forms.Button firstBookButton;
+        private System.Windows.Forms.Button lastBookButton;
     }
 }
 
