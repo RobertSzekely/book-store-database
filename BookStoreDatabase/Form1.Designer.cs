@@ -377,6 +377,7 @@
             this.updBookButton.TabIndex = 38;
             this.updBookButton.Text = "Update";
             this.updBookButton.UseVisualStyleBackColor = true;
+            this.updBookButton.Click += new System.EventHandler(this.updBookButton_Click);
             // 
             // MainWindow
             // 

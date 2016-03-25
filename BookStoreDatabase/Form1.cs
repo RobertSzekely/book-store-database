@@ -238,7 +238,31 @@ namespace BookStoreDatabase
             connection.Open();
             dataAdapter.UpdateCommand.ExecuteNonQuery();
             connection.Close();
-            MessageBox.Show("Book record deleted succesfully");
+            MessageBox.Show("Book record deleted successfully");
+        }
+
+        private void updBookButton_Click(object sender, EventArgs e)
+        {
+            String bookID = booksDataGrid.CurrentRow.Cells[0].Value.ToString();
+            if (bookID == "")
+            {
+                MessageBox.Show("Can not update book with ID NULL");
+                return;
+            }
+            String updQuery = "update Books set book_title=@book_title, pub_date=@pub_date, publisher_id = @publisher_id, language=@language where book_id=" + bookID;
+            dataAdapter.UpdateCommand = new SqlCommand(updQuery, connection);
+            
+            dataAdapter.UpdateCommand.Parameters.Add("@book_title", SqlDbType.VarChar).Value = bookTitleBox.Text;
+            dataAdapter.UpdateCommand.Parameters.Add("@pub_date", SqlDbType.Date).Value = BookPubDateBox.Text;
+            dataAdapter.UpdateCommand.Parameters.Add("@publisher_id", SqlDbType.Int).Value = bookPublisherIDBox.Text;
+            dataAdapter.UpdateCommand.Parameters.Add("@language", SqlDbType.VarChar).Value = bookLanguageBox.Text;
+
+            connection.Open();
+            dataAdapter.UpdateCommand.ExecuteNonQuery();
+            connection.Close();
+
+            MessageBox.Show("Book record uptated successfully");
+
         }
     }
 }
